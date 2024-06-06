@@ -1,24 +1,18 @@
-from pathlib import Path
-import time
 import streamlit as st
-from PIL import Image
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital CV | Pavel 242"
-PAGE_ICON = ":wave: :sunglasses:"
 NAME = "Pavel Chocholous"
-DESCRIPTION = """
-Senior Data Analyst"""
 
 st.set_page_config(page_title="Nadpis stránky", page_icon=":sunglasses:")
 
+# -- TADY SE UDELA SIDE MENU
 with st.sidebar:
     my_radio = st.radio("Wow effect radio button", {
         "Item 1": "Item 1 long description",
         "Item 2": "Item 2 long description"
     })
 
-# --- HERO SECTION ---
+# --- TADY DVA SLOUPECKY NAHORE NA STRANCE
 col1, col2 = st.columns(2, gap="small")
 
 with col1:
@@ -27,8 +21,10 @@ with col1:
 
 with col2:
     st.title(NAME)
-    st.write(DESCRIPTION)
+    st.write("Hehe")
 
+
+# --- A TADY SE MENI, CO JE POD NIMA, PODLE VYBRANEHO BUTTONKU V SIDE MENU
 if my_radio == "Item 1":
     # --- EXPERIENCE & QUALIFICATIONS ---
     st.write('\n')
