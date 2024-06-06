@@ -7,7 +7,7 @@ from PIL import Image
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV_MariaKhromyleva.pdf"
-profile_pic = current_dir / "assets" / "profile-pic.png"
+profile_pic = current_dir / "assets" / "profile-pic.jpg"
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Maria Khromyleva"
@@ -50,7 +50,7 @@ profile_pic = Image.open(profile_pic)
 
 with st.sidebar:
     my_radio = st.radio("Select Section", list(SECTIONS.keys()))
-    awesomeness_level = st.slider("Rate my profile", 0, 10, 5)
+    awesomeness_level = st.slider("Rate my profile", 0, 10, 10)
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
